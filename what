@@ -1,0 +1,209 @@
+-- Gui to Lua
+	-- Version: 3
+
+	-- Instances:
+
+	local BoxingSimGUI = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local Farm = Instance.new("TextButton")
+	local ToolName = Instance.new("TextBox")
+	local Credits = Instance.new("TextLabel")
+	local Close = Instance.new("TextButton")
+	local Note = Instance.new("TextLabel")
+	local Txt = Instance.new("TextLabel")
+	local Safe = Instance.new("TextButton")
+
+	--Properties:
+
+	BoxingSimGUI.Name = "BoxingSimGUI"
+	BoxingSimGUI.Parent = game.CoreGui
+
+	Main.Name = "Main"
+	Main.Parent = BoxingSimGUI
+	Main.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+	Main.BackgroundTransparency = 0.5
+	Main.BorderColor3 = Color3.new(0, 0, 0)
+	Main.BorderSizePixel = 2
+	Main.Position = UDim2.new(0.49167189, 0, 0.374002337, 0)
+	Main.Size = UDim2.new(0.148458377, 10, 0.177407071, 15)
+	Main.Active = true
+	Main.Draggable = true
+
+	Farm.Name = "Farm"
+	Farm.Parent = Main
+	Farm.BackgroundColor3 = Color3.new(0, 1, 0)
+	Farm.BorderColor3 = Color3.new(0, 0, 0)
+	Farm.BorderSizePixel = 2
+	Farm.Position = UDim2.new(0.100999922, 0, 0.317880243, 15)
+	Farm.Size = UDim2.new(0.79406482, 0, 0.186824352, 0)
+	Farm.Font = Enum.Font.SourceSansSemibold
+	Farm.Text = "Farm"
+	Farm.TextColor3 = Color3.new(0.588235, 0.588235, 0.588235)
+	Farm.TextScaled = true
+	Farm.TextSize = 50
+	Farm.TextStrokeTransparency = 0
+	Farm.TextWrapped = true
+
+	ToolName.Name = "ToolName"
+	ToolName.Parent = Main
+	ToolName.BackgroundColor3 = Color3.new(0, 1, 1)
+	ToolName.Position = UDim2.new(0.0718129873, 0, 0.19613339, 0)
+	ToolName.Size = UDim2.new(0.81812942, 10, 0.0945034623, 10)
+	ToolName.Font = Enum.Font.Arial
+	ToolName.Text = "Tool Name..."
+	ToolName.TextColor3 = Color3.new(0, 0, 0)
+	ToolName.TextSize = 20
+	ToolName.TextWrapped = true
+
+	Credits.Name = "Credits"
+	Credits.Parent = Main
+	Credits.BackgroundColor3 = Color3.new(1, 1, 1)
+	Credits.BackgroundTransparency = 1
+	Credits.Position = UDim2.new(0, 0, 0.735770881, 5)
+	Credits.Size = UDim2.new(0.980027437, 5, 0.175099075, 10)
+	Credits.Font = Enum.Font.SourceSans
+	Credits.Text = "Discord: nleant_nlant#9288"
+	Credits.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+	Credits.TextScaled = true
+	Credits.TextSize = 14
+	Credits.TextWrapped = true
+
+	Close.Name = "Close"
+	Close.Parent = Main
+	Close.BackgroundColor3 = Color3.new(1, 0, 0)
+	Close.BorderColor3 = Color3.new(0, 0, 0)
+	Close.BorderSizePixel = 2
+	Close.Position = UDim2.new(0.930000007, 0, -0.00300000003, 0)
+	Close.Size = UDim2.new(0.0727670565, 0, 0.136973202, 0)
+	Close.Font = Enum.Font.ArialBold
+	Close.Text = "X"
+	Close.TextColor3 = Color3.new(0.588235, 0.588235, 0.588235)
+	Close.TextScaled = true
+	Close.TextSize = 50
+	Close.TextStrokeTransparency = 0
+	Close.TextWrapped = true
+
+	Note.Name = "Note"
+	Note.Parent = Main
+	Note.BackgroundColor3 = Color3.new(1, 1, 1)
+	Note.BackgroundTransparency = 1
+	Note.Position = UDim2.new(0.0678233802, 0, -0.0392548777, 5)
+	Note.Size = UDim2.new(0.786373973, 5, 0.108392037, 10)
+	Note.Font = Enum.Font.SourceSans
+	Note.Text = "\"R-Shift\" To Toggle GUI"
+	Note.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+	Note.TextScaled = true
+	Note.TextSize = 14
+	Note.TextWrapped = true
+
+	Txt.Name = "Txt"
+	Txt.Parent = Main
+	Txt.BackgroundColor3 = Color3.new(0, 0, 0)
+	Txt.BackgroundTransparency = 0.5
+	Txt.Position = UDim2.new(0, 0, 0.963711143, 5)
+	Txt.Size = UDim2.new(0.980027437, 5, 0.235015258, 10)
+	Txt.Font = Enum.Font.SourceSans
+	Txt.Text = "Farm will stop working if you die, go somewhere nobody can get you"
+	Txt.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+	Txt.TextScaled = true
+	Txt.TextSize = 14
+	Txt.TextWrapped = true
+
+	Safe.Name = "Safe"
+	Safe.Parent = Main
+	Safe.BackgroundColor3 = Color3.new(1, 1, 0)
+	Safe.BorderColor3 = Color3.new(0, 0, 0)
+	Safe.BorderSizePixel = 2
+	Safe.Position = UDim2.new(0.100999922, 0, 0.546503961, 15)
+	Safe.Size = UDim2.new(0.79406482, 0, 0.169237912, 0)
+	Safe.Font = Enum.Font.SourceSansSemibold
+	Safe.Text = "TP To Safe Zone"
+	Safe.TextColor3 = Color3.new(0.588235, 0.588235, 0.588235)
+	Safe.TextScaled = true
+	Safe.TextSize = 50
+	Safe.TextStrokeTransparency = 0
+	Safe.TextWrapped = true
+
+	--Script:
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local mouse = plr:GetMouse()
+
+	local debounce = false
+	local farming = nil
+
+	function StartFarm()
+		farming = true
+		Farm.BackgroundColor3 = Color3.fromRGB(255,0,0)
+		wait()
+		while farming == true do
+			wait(0.5)
+			for i,v in pairs(char:GetChildren()) do
+				if v.Name == ToolName.Text then
+					v:Activate()
+				else
+					for i,v in pairs(plr.Backpack:GetChildren()) do
+						if v.Name == ToolName.Text then
+							v.Parent = plr.Character
+						end
+					end
+				end
+			end
+		end
+	end
+
+	function StopFarm()
+		Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		farming = false
+	end
+
+	Farm.MouseButton1Click:Connect(function()
+		if debounce == false then 
+			debounce = true
+			StartFarm()
+		else
+			debounce = false
+			StopFarm()
+		end
+	end)
+
+	Close.MouseButton1Click:Connect(function()
+		BoxingSimGUI:Destroy()
+	end)
+
+	Safe.MouseButton1Click:Connect(function()
+		char.HumanoidRootPart.CFrame = CFrame.new(-1977.9436, 510, -5295.2124, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	end)
+
+--[[local debounce = true
+
+plr:GetMouse().KeyDown(function(key)
+	local key = string.lower(key)
+	wait()
+	if string.byte(key) == 48 then
+		if debounce == true then
+			debounce = false
+			Main.Visible = false
+		else
+				debounce = true
+				main.Visible = true
+		end
+	end
+end)]]
+
+	local debounce = true
+
+	mouse.KeyDown:Connect(function(key)
+		local key = string.upper(key)
+		wait()
+		if string.byte(key) == 47 then
+			if debounce == true then
+				debounce = false
+				Main.Visible = false
+			else
+				debounce = true
+				Main.Visible = true
+			end
+		end
+	end)
